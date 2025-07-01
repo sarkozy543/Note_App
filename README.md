@@ -1,5 +1,4 @@
 # Note_App
- Advanced note taking app
 Note App
 A simple and modern note-taking application built with Flutter.
 
