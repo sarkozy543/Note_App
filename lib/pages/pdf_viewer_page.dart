@@ -78,12 +78,12 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
                 children: [
                   Text(
                     'Seçilen Metin:',
-                    style: Theme.of(context).textTheme.titleSmall,
+                    style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold), // <-- Rengi siyah yaptık
                   ),
                   const SizedBox(height: 8),
                   Text(
                     _selectedText,
-                    style: Theme.of(context).textTheme.bodyMedium,
+                    style: const TextStyle(color: Colors.black, fontSize: 16), // <-- Rengi siyah yaptık
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -107,9 +107,9 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Theme.of(context).colorScheme.secondary,
-                      foregroundColor: Theme.of(context).colorScheme.onSecondary,
+                      foregroundColor: Colors.black, // <-- Rengi siyah yaptık
                     ),
-                    child: const Text('Seçili Metni Nota Ekle'),
+                    child: const Text('Seçili Metni Nota Ekle', style: TextStyle(color: Colors.black)), // <-- Rengi siyah yaptık
                   ),
                 ],
               ),
@@ -118,4 +118,4 @@ class _PdfViewerPageState extends State<PdfViewerPage> {
       ),
     );
   }
-} 
+}

@@ -59,30 +59,30 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
         maxLines: 1,
         initialValue: title,
         style: const TextStyle(
-          color: Colors.white70,
+          color: Colors.black, // <-- Rengi siyah yaptık
           fontWeight: FontWeight.bold,
           fontSize: 24,
         ),
         decoration: const InputDecoration(
           border: InputBorder.none,
           hintText: 'Başlık',
-          hintStyle: TextStyle(color: Colors.white70),
+          hintStyle: TextStyle(color: Colors.black), // <-- Rengi siyah yaptık
         ),
-        validator: (value) => value != null && value.isEmpty ? 'Başlık boş olamaz' : null, // 'title' yerine 'value'
-        onChanged: (value) => setState(() => title = value), // 'this.title' yerine 'title'
+        validator: (value) => value != null && value.isEmpty ? 'Başlık boş olamaz' : null,
+        onChanged: (value) => setState(() => title = value),
       );
 
   Widget buildContentField() => TextFormField(
-        maxLines: null, // Sınırsız satır
+        maxLines: null,
         initialValue: content,
-        style: const TextStyle(color: Colors.white60, fontSize: 18),
+        style: const TextStyle(color: Colors.black, fontSize: 18), // <-- Rengi siyah yaptık
         decoration: const InputDecoration(
           border: InputBorder.none,
           hintText: 'Notunuzu yazın...',
-          hintStyle: TextStyle(color: Colors.white60),
+          hintStyle: TextStyle(color: Colors.black), // <-- Rengi siyah yaptık
         ),
-        validator: (value) => value != null && value.isEmpty ? 'İçerik boş olamaz' : null, // 'content' yerine 'value'
-        onChanged: (value) => setState(() => content = value), // 'this.content' yerine 'content'
+        validator: (value) => value != null && value.isEmpty ? 'İçerik boş olamaz' : null,
+        onChanged: (value) => setState(() => content = value),
       );
 
   Widget buildButton() {
@@ -92,7 +92,7 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          foregroundColor: Colors.white,
+          foregroundColor: Colors.black, // <-- Rengi siyah yaptık
           backgroundColor: isFormValid ? null : Colors.grey.shade700,
         ),
         onPressed: () async {
@@ -110,7 +110,7 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
             }
           }
         },
-        child: const Text('Kaydet'),
+        child: const Text('Kaydet', style: TextStyle(color: Colors.black)), // <-- Rengi siyah yaptık
       ),
     );
   }

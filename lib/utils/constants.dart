@@ -6,8 +6,8 @@ class AppColors {
   static const Color accent = Color(0xFF673AB7);       // Deep Purple
   static const Color background = Color(0xFFF5F5F5);   // Light Grey
   static const Color surface = Color(0xFFFFFFFF);      // White
-  static const Color text = Color(0xFF263238);         // Blue Grey 900
-  static const Color textLight = Color(0xFF607D8B);    // Blue Grey 400
+  static const Color text = Colors.black;         // Artık siyah
+  static const Color textLight = Colors.black;    // Artık siyah
 
   static const List<Color> noteColors = [
     Color(0xFFFFF8E1), // Amber 50

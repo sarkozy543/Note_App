@@ -151,7 +151,7 @@ class _WebScraperPageState extends State<WebScraperPage> {
                         setState(() {
                           _selectedText = '';
                           // Geri gidildiğinde URL'nin güncellenmesi gerektiği için
-                          // WebViewController'dan current URL'i tekrar çekebiliriz.
+                          // WebViewController'dan current URL'i tekrar çekabiliriz.
                           // Ancak bu, sayfa yüklendikten sonra 'onPageStarted' ile zaten yapılıyor.
                           // Bu nedenle burada ek bir işlem yapmaya gerek yok.
                         });
@@ -174,15 +174,19 @@ class _WebScraperPageState extends State<WebScraperPage> {
                   Expanded(
                     child: Text(
                       'Seçilen Metin: "${_selectedText.length > 50 ? _selectedText.substring(0, 50) + '...' : _selectedText}"',
-                      style: TextStyle(color: Theme.of(context).colorScheme.onSurface, fontSize: 14),
+                      style: TextStyle(color: Colors.black, fontSize: 14),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                     ),
                   ),
                   const SizedBox(width: 8),
                   ElevatedButton.icon(
-                    icon: const Icon(Icons.note_add),
-                    label: const Text('Nota Ekle'),
+                    icon: const Icon(Icons.note_add, color: Colors.black),
+                    label: const Text('Nota Ekle', style: TextStyle(color: Colors.black)),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Theme.of(context).colorScheme.primary,
+                      foregroundColor: Colors.black,
+                    ),
                     onPressed: () async {
                       if (_selectedText.isNotEmpty && mounted) {
                         await Navigator.of(context).push(
@@ -201,15 +205,10 @@ class _WebScraperPageState extends State<WebScraperPage> {
                         });
                       }
                     },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Theme.of(context).colorScheme.primary,
-                      foregroundColor: Theme.of(context).colorScheme.onPrimary,
-                    ),
                   ),
                   const SizedBox(width: 8),
                   IconButton(
-                    icon: const Icon(Icons.clear),
-                    color: Theme.of(context).colorScheme.onSurface,
+                    icon: const Icon(Icons.clear, color: Colors.black),
                     onPressed: () {
                       setState(() {
                         _selectedText = '';

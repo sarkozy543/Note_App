@@ -119,13 +119,13 @@ class _MainNotesPageState extends State<MainNotesPage> {
             : notes.isEmpty
                 ? const Text(
                     'Henüz Not Yok',
-                    style: TextStyle(color: Colors.white, fontSize: 24),
+                    style: TextStyle(color: Colors.black, fontSize: 24), // <-- Rengi siyah yaptık
                   )
                 : buildNotes(),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Theme.of(context).colorScheme.primary,
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add, color: Colors.black), // <-- Rengi siyah yaptık
         onPressed: () async {
           await Navigator.of(context).push(
             MaterialPageRoute(builder: (ctx) => const AddEditNotePage()),
@@ -196,7 +196,7 @@ class NoteCardWidget extends StatelessWidget {
           children: [
             Text(
               time,
-              style: TextStyle(color: Colors.grey.shade700),
+              style: TextStyle(color: Colors.black), // <-- Rengi siyah yaptık
             ),
             const SizedBox(height: 4),
             Text(

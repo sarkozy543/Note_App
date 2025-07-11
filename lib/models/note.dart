@@ -68,3 +68,4 @@ class Note {
         NoteFields.createdTime: createdTime.toIso8601String(),
       };
 }
+

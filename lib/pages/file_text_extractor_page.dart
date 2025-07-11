@@ -244,7 +244,7 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
                           child: Text(
                             'Desteklenen Dosya Türleri:',
                             style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                              color: Theme.of(context).colorScheme.primary,
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -278,7 +278,7 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
                   ),
                   elevation: 4,
                   backgroundColor: Theme.of(context).colorScheme.primary,
-                  foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                  foregroundColor: Colors.black,
                   minimumSize: const Size(double.infinity, 50),
                 ),
                 child: Row(
@@ -287,6 +287,7 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
                     Icon(
                       _isLoading ? Icons.hourglass_empty : Icons.file_upload,
                       size: 24,
+                      color: Colors.black,
                     ),
                     const SizedBox(width: 8),
                     Text(
@@ -294,6 +295,7 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
                       style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
                     ),
                   ],
@@ -311,15 +313,15 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: ListTile(
-                    leading: const Icon(Icons.file_present),
+                    leading: const Icon(Icons.file_present, color: Colors.black),
                     title: Text(
                       'Seçilen Dosya:',
                       style: TextStyle(
-                        color: Theme.of(context).colorScheme.secondary,
+                        color: Colors.black,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    subtitle: Text(_fileName),
+                    subtitle: Text(_fileName, style: TextStyle(color: Colors.black)),
                   ),
                 ),
               ),
@@ -348,13 +350,13 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
                           children: [
                             Icon(
                               Icons.text_fields,
-                              color: Theme.of(context).colorScheme.onPrimaryContainer,
+                              color: Colors.black,
                             ),
                             const SizedBox(width: 8),
                             Text(
                               'Metinden İstediğiniz Kısmı Seçin:',
                               style: TextStyle(
-                                color: Theme.of(context).colorScheme.onPrimaryContainer,
+                                color: Colors.black,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -368,7 +370,7 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
                             child: SelectableText(
                               _extractedText,
                               style: TextStyle(
-                                color: Theme.of(context).colorScheme.onSurface,
+                                color: Colors.black,
                                 height: 1.5,
                               ),
                               onSelectionChanged: (selection, cause) {
@@ -404,13 +406,13 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
                         children: [
                           Icon(
                             Icons.format_quote,
-                            color: Theme.of(context).colorScheme.secondary,
+                            color: Colors.black,
                           ),
                           const SizedBox(width: 8),
                           Text(
                             'Seçilen Metin:',
                             style: TextStyle(
-                              color: Theme.of(context).colorScheme.secondary,
+                              color: Colors.black,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -420,7 +422,7 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
                       Text(
                         _selectedText,
                         style: TextStyle(
-                          color: Theme.of(context).colorScheme.onSurface,
+                          color: Colors.black,
                         ),
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
@@ -443,11 +445,11 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
                             }
                           });
                         },
-                        icon: const Icon(Icons.note_add),
-                        label: const Text('Seçili Metni Nota Ekle'),
+                        icon: const Icon(Icons.note_add, color: Colors.black),
+                        label: const Text('Seçili Metni Nota Ekle', style: TextStyle(color: Colors.black)),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Theme.of(context).colorScheme.secondary,
-                          foregroundColor: Theme.of(context).colorScheme.onSecondary,
+                          foregroundColor: Colors.black,
                           padding: const EdgeInsets.symmetric(vertical: 12),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -469,12 +471,12 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
       avatar: Icon(
         icon,
         size: 18,
-        color: Theme.of(context).colorScheme.primary,
+        color: Colors.black,
       ),
       label: Text(
         label,
         style: TextStyle(
-          color: Theme.of(context).colorScheme.primary,
+          color: Colors.black,
           fontWeight: FontWeight.w500,
         ),
       ),
@@ -487,4 +489,4 @@ class _FileTextExtractorPageState extends State<FileTextExtractorPage> {
       ),
     );
   }
-} 
+}

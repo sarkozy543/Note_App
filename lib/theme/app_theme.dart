@@ -11,25 +11,25 @@ class AppTheme {
         secondary: AppColors.secondary,
         surface: AppColors.surface,
         background: AppColors.background,
-        onPrimary: Colors.white,
+        onPrimary: Colors.black,
         onSecondary: Colors.black,
-        onSurface: AppColors.text,
-        onBackground: AppColors.text,
+        onSurface: Colors.black,
+        onBackground: Colors.black,
       ),
       
       textTheme: GoogleFonts.poppinsTextTheme().copyWith(
         headlineLarge: TextStyle(
-          color: AppColors.text,
+          color: Colors.black,
           fontSize: 28,
           fontWeight: FontWeight.bold,
         ),
         titleMedium: TextStyle(
-          color: AppColors.text,
+          color: Colors.black,
           fontSize: 16,
           fontWeight: FontWeight.w600,
         ),
         bodyMedium: TextStyle(
-          color: AppColors.textLight,
+          color: Colors.black,
           fontSize: 14,
         ),
       ),
@@ -51,9 +51,9 @@ class AppTheme {
         backgroundColor: AppColors.surface,
         elevation: 0,
         centerTitle: true,
-        iconTheme: IconThemeData(color: AppColors.primary),
+        iconTheme: IconThemeData(color: Colors.black),
         titleTextStyle: GoogleFonts.poppins(
-          color: AppColors.primary,
+          color: Colors.black,
           fontSize: 18,
           fontWeight: FontWeight.w600,
         ),

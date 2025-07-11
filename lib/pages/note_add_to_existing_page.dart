@@ -123,7 +123,7 @@ class _NoteAddToExistingPageState extends State<NoteAddToExistingPage> {
             : notes.isEmpty
                 ? const Text(
                     'Not bulunamadı. Lütfen önce bir not oluşturun.',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    style: TextStyle(color: Colors.black, fontSize: 18), // <-- Rengi siyah yaptık
                     textAlign: TextAlign.center,
                   )
                 : buildNotesGrid(),
@@ -155,7 +155,7 @@ class _NoteAddToExistingPageState extends State<NoteAddToExistingPage> {
                   children: [
                     Text(
                       DateFormat.yMMMd().format(note.createdTime),
-                      style: TextStyle(color: Colors.grey.shade700, fontSize: 12),
+                      style: TextStyle(color: Colors.black, fontSize: 12), // <-- Rengi siyah yaptık
                     ),
                     const SizedBox(height: 4),
                     Text(
@@ -171,7 +171,7 @@ class _NoteAddToExistingPageState extends State<NoteAddToExistingPage> {
                     const SizedBox(height: 4),
                     Text(
                       note.content,
-                      style: const TextStyle(color: Colors.black54, fontSize: 14),
+                      style: const TextStyle(color: Colors.black, fontSize: 14), // <-- Rengi siyah yaptık
                       maxLines: 4,
                       overflow: TextOverflow.ellipsis,
                     ),

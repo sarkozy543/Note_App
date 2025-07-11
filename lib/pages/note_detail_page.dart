@@ -96,14 +96,14 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
                 children: [
                   Text(
                     DateFormat.yMMMd().format(note.createdTime),
-                    style: const TextStyle(color: Colors.white38),
+                    style: const TextStyle(color: Colors.black38), // <-- Rengi siyah yaptık
                   ),
                   const SizedBox(height: 8),
-                  Expanded( // İçeriğin taşmasını önlemek için Expanded kullan
-                    child: SingleChildScrollView( // İçerik uzunsa kaydırılabilir olsun
+                  Expanded(
+                    child: SingleChildScrollView(
                       child: Text(
                         note.content,
-                        style: const TextStyle(color: Colors.white70, fontSize: 18),
+                        style: const TextStyle(color: Colors.black, fontSize: 18), // <-- Rengi siyah yaptık
                       ),
                     ),
                   )

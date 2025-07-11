@@ -79,4 +79,5 @@ class FileUploadService {
       return 'Dosya okunurken bir hata oluştu: $e';
     }
   }
-} 
+}
+

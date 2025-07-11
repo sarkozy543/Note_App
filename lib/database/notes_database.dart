@@ -112,3 +112,4 @@ CREATE TABLE $tableNotes (
     db.close();
   }
 }
+
